@@ -39,3 +39,24 @@ notes.update(1005, updateObj, (err, item) => {
     }
     });
 
+notes.create({title:'myNote', content: 'my content'}, (err, item) => {
+  if (err) {
+  console.error(err);
+  }
+  if (item) {
+  console.log(item)
+  }
+});
+
+notes.delete(1010, (err, item) => {
+  if (err) {
+    console.log(err);
+  }
+  if (item) {  
+    console.log(`${item} item was deleted`);
+  } else {
+    console.log('not found')
+  }
+});
+
+
