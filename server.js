@@ -2,6 +2,9 @@
 
 // Load array of notes
 const data = require('./db/notes');
+const simDB = require('./db/simDB');
+const notes = simDB.initialize(data);
+
 //Load modules
 const { PORT } = require('./config')
 const express = require('express');
