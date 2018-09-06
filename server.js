@@ -8,10 +8,11 @@ const notes = simDB.initialize(data);
 //Load modules
 const { PORT } = require('./config')
 const express = require('express');
-const {getLogs} = require('./middleware/logger');
+const morgan = require('morgan');
+
 const app = express();
 
-app.use(getLogs);
+app.use(morgan('dev'));
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -38,6 +39,7 @@ app.put('/api/notes/:id', (req, res, next) => {
     if (err) {
       return next(err);
     }
+
     else if (item !== undefined) res.json(item);
     else next(); 
   });

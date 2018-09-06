@@ -1,0 +1,278 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"inline"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"rat",
+				"rating-filter"
+			],
+			[
+				"item",
+				"item"
+			],
+			[
+				"book",
+				"bookmark-heading"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"bookmark",
+				"bookmark-creation"
+			],
+			[
+				"js-",
+				"js-delete-bookmark"
+			],
+			[
+				"handle",
+				"handleDeleteBookmark"
+			],
+			[
+				"ge",
+				"generateItemElement"
+			],
+			[
+				"target",
+				"targetID"
+			],
+			[
+				"id",
+				"id"
+			],
+			[
+				"find",
+				"findById"
+			],
+			[
+				"js",
+				"js-add-form-url"
+			],
+			[
+				"api",
+				"API_KEY"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"API",
+				"API_KEY"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/scufflez/ei24/drills/solo-practice/bookmark-app/scripts/index.js",
+		"/home/scufflez/ei24/drills/solo-practice/bookmark-app/index.html",
+		"/home/scufflez/ei24/drills/solo-practice/bookmark-app/index.css",
+		"/home/scufflez/ei24/drills/solo-practice/bookmark-app/scripts/store.js",
+		"/home/scufflez/ei24/drills/solo-practice/bookmark-app/scripts/api.js",
+		"/home/scufflez/ei24/drills/solo-practice/bookmark-app/scripts/item.js",
+		"/home/scufflez/ei24/drills/chris-colin-function-drills1/RESTful-APIs/shopping-list-week-2/scripts/api.js",
+		"/home/scufflez/ei24/drills/chris-colin-function-drills1/RESTful-APIs/shopping-list-week-2/scripts/store.js",
+		"/home/scufflez/ei24/drills/chris-colin-function-drills1/RESTful-APIs/shopping-list-week-2/scripts/shopping-list.js",
+		"/home/scufflez/ei24/drills/chris-colin-function-drills1/RESTful-APIs/shopping-list-week-2/scripts/index.js",
+		"/home/scufflez/ei24/drills/chris-colin-function-drills1/RESTful-APIs/shopping-list-week-2/index.html",
+		"/home/scufflez/ei24/drills/cameron-colin/first-ajax-no-modules/index.html",
+		"/home/scufflez/ei24/drills/cameron-colin/first-ajax-no-modules/styles/index.css",
+		"/home/scufflez/ei24/drills/cameron-colin/first-ajax-no-modules/scripts/index.js",
+		"/home/scufflez/ei24/drills/ticTacToe/ttt-app-state/index.html",
+		"/home/scufflez/ei24/drills/ticTacToe/ttt-app-state/app.js",
+		"/home/scufflez/ei24/drills/ticTacToe/ttt-app-state/main.css",
+		"/home/scufflez/ei24/drills/shopping-list-week-2/shopping-list-week-2/scripts/shopping-list.js",
+		"/home/scufflez/ei24/drills/shopping-list-week-2/shopping-list-week-2/scripts/store.js",
+		"/home/scufflez/ei24/drills/shopping-list-week-2/shopping-list-week-2/scripts/Item.js",
+		"/home/scufflez/ei24/drills/shopping-list-week-2/shopping-list-week-2/scripts/index.js",
+		"/home/scufflez/ei24/drills/shopping-list-week-2/shopping-list-week-2/index.html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"form",
+			"createItem",
+			"findById",
+			"updateItem"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "simDB.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 201.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
