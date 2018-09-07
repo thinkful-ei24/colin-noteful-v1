@@ -22,40 +22,41 @@ router.put('/notes/:id', (req, res, next) => {
     }
   });
   console.log(updateObj); 
-  notes.update(id, updateObj, (err, item) => {
-    if (err) {
-      return next(err);
-    }
-
-    else if (item !== undefined) res.json(item);
-    else next(); 
-  });
+  notes.update(id, updateObj)
+    .then(item => {
+      if (item !== undefined) res.json(item);
+      else next();
+    })
+    .catch (err => {
+      next(err);
+    });
 });
 
 
 //handle search term 
 router.get('/notes', (req, res) => {
-  const {searchTerm} = req.query;
-  notes.filter(searchTerm, (err, list) => {
-  if (err) {
-    return next(err);
-    //return res.json(data.filter(item => item.title.includes(searchTerm)));
-  }
-  res.json(list);
-  });
+  const { searchTerm } = req.query;
+  notes.filter(searchTerm)
+    .then(item => {
+      if (item) res.json(item);
+    })
+    .catch (err => {
+      ext(err)
+    });
 });
 
 //handle returning a specific item with a given ID
 router.get('/notes/:id', (req, res, next) => {
   const { id } = req.params;
   console.log(id);
-  notes.find(id, (err, list) => {
-  if (err) {
-    return next(err);
-  }
-  else if (list !== undefined) res.json(list);
-  else next();
-  });
+  notes.find(id)
+    .then (item => {
+      if (item) res.json(item);
+      else next();
+    })
+    .catch(err => {
+      next(err);
+    });
 });
 
 
@@ -70,13 +71,13 @@ router.post('/notes', (req, res) => {
     err.status = 400;
     return next(err);
   }
-  notes.create(newItem, (err, item) => {
-    if (err) return next(err);
-    if (item) res.location(`http://${req.headers.host}/notes/${item.id}`).status(201).json(item);
-    else {
-      next()
-    };
-  });
+  notes.create(newItem)
+    .then (item => {
+      if (item) res.location(`http://${req.headers.host}/notes/${item.id}`).status(201).json(item);
+    })
+    .catch (err => {
+      next(err);
+    })
 });
 
 //deletes a specific item from the list of notes
@@ -87,18 +88,15 @@ router.delete('/notes/:id', (req, res, next) => {
   //   err.status = 400;
   //   return next(err) 
   // }
-  notes.delete(id, (err, item) => {
-    if (err) {
-      console.log(err);
-      next(err)
-    }
-    if (id) {  
-      console.log(`${item} item was deleted`);
+  notes.delete(id)
+    .then (item => {
+      console.log(`${item.title} item was deleted`);
       res.sendStatus(204);
-    } else {
-      console.log('not found');
-    }
-  });
+    })
+    .catch (err => {
+      console.log(err);
+      next(err);
+    });
 });
 
 module.exports = router; 
