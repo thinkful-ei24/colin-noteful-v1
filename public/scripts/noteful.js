@@ -80,30 +80,23 @@ const noteful = (function () {
 
       if (noteObj.id) {
 
-        api.update(store.currentNote.id, noteObj, updateResponse => {
-          store.currentNote = updateResponse;
-
+        api.update(store.currentNote.id, noteObj)
+          .then (item => store.currentNote = item);
           api.search(store.currentSearchTerm)
             .then (item => {
               store.notes = item;
               render();
           });
-        });
 
       } else {
-
-        api.create(noteObj, createResponse => {
-          store.currentNote = createResponse;
-
+        api.create(noteObj)
+          .then (item => store.currentNote = item);
           api.search(store.currentSearchTerm)
             .then (item => {
               store.notes = item;
               render();
-          });
-
-        });
-      }
-
+        });        
+      };
     });
   }
 
@@ -123,8 +116,8 @@ const noteful = (function () {
 
       const noteId = getNoteIdFromElement(event.currentTarget);
 
-      api.remove(noteId, () => {
-
+      api.remove(noteId)
+        .then( () => {
         api.search(store.currentSearchTerm)
           .then (item => {
             store.notes = item;
@@ -133,8 +126,8 @@ const noteful = (function () {
             }
             render();
         });
-
-      });
+        });
+      //});
     });
   }
 

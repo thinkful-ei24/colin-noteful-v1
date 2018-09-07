@@ -21,7 +21,7 @@ const api = {
   //   });
   // },
 
-  details: function (id)
+  details: function (id) {
     return $.ajax({
       type: 'GET',
       dataType: 'json',
@@ -29,35 +29,32 @@ const api = {
     });
   },
 
-  update: function (id, obj, callback) {
-    $.ajax({
+  update: function (id, obj) {
+    return $.ajax({
       type: 'PUT',
       url: `/api/notes/${id}`,
       contentType: 'application/json',
       dataType: 'json',
-      data: JSON.stringify(obj),
-      success: callback
+      data: JSON.stringify(obj)
     });
   },
 
-  create: function (obj, callback) {
-    $.ajax({
+  create: function (obj) {
+    return $.ajax({
       type: 'POST',
       url: '/api/notes',
       contentType: 'application/json',
       dataType: 'json',
       processData: false,
       data: JSON.stringify(obj),
-      success: callback
     });
   },
 
-  remove: function (id, callback) {
+  remove: function (id) {
     return $.ajax({
       type: 'DELETE',
       url: `/api/notes/${id}`,
       dataType: 'json',
-      success: callback
     });
   }
 
