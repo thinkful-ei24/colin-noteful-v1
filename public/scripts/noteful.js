@@ -42,13 +42,14 @@ const noteful = (function () {
 
       const noteId = getNoteIdFromElement(event.currentTarget);
 
-      api.details(noteId, detailsResponse => {
-        store.currentNote = detailsResponse;
-        render();
-      });
-
+      api.details(noteId)
+        .then (item => {
+          store.currentNote = item;
+          render();
+        })
+        .catch (err => console.log(err));
     });
-  }
+  };
 
   function handleNoteSearchSubmit() {
     $('.js-notes-search-form').on('submit', event => {

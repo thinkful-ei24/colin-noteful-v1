@@ -12,12 +12,20 @@ const api = {
     });
   },
 
-  details: function (id, callback) {
-    $.ajax({
+  // details: function (id, callback) {
+  //   $.ajax({
+  //     type: 'GET',
+  //     dataType: 'json',
+  //     url: `/api/notes/${id}`,
+  //     success: callback
+  //   });
+  // },
+
+  details: function (id)
+    return $.ajax({
       type: 'GET',
       dataType: 'json',
-      url: `/api/notes/${id}`,
-      success: callback
+      url: `/api/notes/${id}`
     });
   },
 
